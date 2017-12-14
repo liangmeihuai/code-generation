@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="mysqlGenerator" targetRuntime="MyBatis3">
+		<!-- Pagination -->
+		<plugin type="com.mybatis.page.plugin.MySQLPaginationPlugin"></plugin>
+<!-- 		<plugin type="com.mybatis.page.plugin.PostgreSQLPaginationPlugin"></plugin> -->
+
+		<!-- 取消注释 -->
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"	
+		connectionURL="jdbc:mysql://101.200.98.66:3306/hallcloud?useUnicode=true"
+			userId="lihuo" password="lihuoyunce" />
+			
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 配置自动生成的Model的保存路径与其它参数 -->
+		<javaModelGenerator targetPackage="com.lihuo.module.api.po"
+			targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- 配置自动生成的Mappper.xml映射的保存路径与其它参数 -->
+		<sqlMapGenerator targetPackage="com.lihuo.module.admin.mapper"
+			targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- 配置自动生成的Mappper.java接口的保存路径与其它参数 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.lihuo.module.admin.dao" targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		
+
+		<!-- 生成表对应的操作与实体对象 -->
+
+<!-- 		 <table tableName="hc_brand_score_conf" domainObjectName="BrandScoreConf" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand" domainObjectName="Brand" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand_menu_item" domainObjectName="BrandMenuItem" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand_menu_item_catagory" domainObjectName="BrandMenuItemCatagory" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_menu_item" domainObjectName="ShopMenuItem" enableUpdateByExample="true" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_menu_catagory" domainObjectName="ShopMenuCatagory" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_menu_sort" domainObjectName="ShopMenuSort" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_silver" domainObjectName="ShopSilver" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_takeout_conf" domainObjectName="ShopTakeoutConf" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+
+<!-- 		 <table tableName="hc_activity" domainObjectName="Activity" enableUpdateByExample="true" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_condition_rule" domainObjectName="ConditionRule" enableUpdateByExample="true" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+
+
+<!-- 		 <table tableName="wx_notice" domainObjectName="WxNotice" enableUpdateByExample="true" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="wx_template" domainObjectName="WxTemplate" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand_lottery_detail" domainObjectName="BrandLotteryDetail" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_area" domainObjectName="Area" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_cd" domainObjectName="ShopCd" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_base_funcinfo" domainObjectName="ShopBaseFuncInfo" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_takeout_conf" domainObjectName="ShopTakeoutConf" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_cash_info" domainObjectName="CashInfo" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_cash_type" domainObjectName="CashType" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_shop_cash" domainObjectName="ShopCash" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand_cash_info" domainObjectName="BrandCashInfo" enableUpdateByExample="true" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand_cash_type" domainObjectName="BrandCashType" enableUpdateByExample="true" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+		 
+<!-- 		 <table tableName="hc_shop_accept_order_conf" domainObjectName="ShopAcceptOrderConf" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		</table> -->
+<!-- 			 <table tableName="hc_shop" domainObjectName="Shop" enableUpdateByExample="false" >  -->
+<!-- 		 		<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 	</table>  -->
+<!-- 		 <table tableName="hc_shop_menu_numconf" domainObjectName="ShopMenuNumconf" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_city" domainObjectName="City" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand_coupon_template" domainObjectName="BrandCouponTemplate" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_admin" domainObjectName="Admin" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="hc_brand_score_conf" domainObjectName="BrandScoreConf" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+
+
+<!-- 		 <table tableName="act_member_coupon_detail" domainObjectName="ActMemberCouponDetail" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 		 <table tableName="act_member_detail" domainObjectName="ActMemberDetail" enableUpdateByExample="false" > -->
+<!-- 		 	<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 </table> -->
+<!-- 			 <table tableName="hc_member" domainObjectName="Member" enableUpdateByExample="false" >  -->
+<!-- 		 		<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 	</table>  -->
+
+<!-- 			<table tableName="hc_brand_coupon_use_state" domainObjectName="BrandCouponUseState" enableUpdateByExample="false" >  -->
+<!-- 		 		<property name="useActualColumnNames" value="true"/> -->
+<!-- 		 	</table> -->
+<!-- 		<table tableName="hc_shop_desk" domainObjectName="ShopDesk" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+
+<!-- 		<table tableName="hc_shop" domainObjectName="Shop" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="hc_activity" domainObjectName="Activity" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="hc_condition_rule" domainObjectName="ConditionRule" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="hc_gift_rule" domainObjectName="GiftRule" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="hc_online" domainObjectName="DeviceOnline" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+		<table tableName="hc_admin_log" domainObjectName="AdminLog" enableUpdateByExample="true">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+
+	</context>
+</generatorConfiguration> 

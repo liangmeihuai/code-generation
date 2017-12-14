@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<!DOCTYPE generatorConfiguration  
+  PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"  
+  "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+<generatorConfiguration>
+	<context id="mysqlGenerator" targetRuntime="MyBatis3">
+		<!-- Pagination -->
+		<plugin type="com.mybatis.page.plugin.MySQLPaginationPlugin"></plugin>
+<!-- 		<plugin type="com.mybatis.page.plugin.PostgreSQLPaginationPlugin"></plugin> -->
+
+		<!-- 取消注释 -->
+		<commentGenerator>
+			<property name="suppressDate" value="true" />
+			<property name="suppressAllComments" value="true" />
+		</commentGenerator>
+
+		<jdbcConnection driverClass="com.mysql.jdbc.Driver"	
+		connectionURL="jdbc:mysql://123.56.234.177:3306/ybly?useUnicode=true"
+			userId="root" password="xyz870828" />
+			
+
+		<javaTypeResolver>
+			<property name="forceBigDecimals" value="false" />
+		</javaTypeResolver>
+
+		<!-- 配置自动生成的Model的保存路径与其它参数 -->
+		<javaModelGenerator targetPackage="com.ybly.model"
+			targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+			<property name="trimStrings" value="true" />
+		</javaModelGenerator>
+
+		<!-- 配置自动生成的Mappper.xml映射的保存路径与其它参数 -->
+		<sqlMapGenerator targetPackage="com.ybly.mapper"
+			targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+		</sqlMapGenerator>
+
+		<!-- 配置自动生成的Mappper.java接口的保存路径与其它参数 -->
+		<javaClientGenerator type="XMLMAPPER"
+			targetPackage="com.ybly.dao" targetProject=".\src">
+			<property name="enableSubPackages" value="false" />
+		</javaClientGenerator>
+		
+
+		<!-- 生成表对应的操作与实体对象 -->
+
+<!-- 		<table tableName="tbUser" domainObjectName="User" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbTravel" domainObjectName="Travel" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbTouristGuide" domainObjectName="TouristGuide" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbBusinessScope" domainObjectName="BusinessScope" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbTravelBusinessScope" domainObjectName="TravelBusinessScope" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbCarInfo" domainObjectName="CarInfo" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbDriver" domainObjectName="Driver" enableUpdateByExample="true"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbTour" domainObjectName="Tour" enableUpdateByExample="fasle"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbTravelTeam" domainObjectName="TravelTeam" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbTravelTeamLine" domainObjectName="TravelTeamLine" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbResortManager" domainObjectName="ResortManager" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbResorts" domainObjectName="Resorts" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbBusiness" domainObjectName="Business" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbLine" domainObjectName="Line" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+<!-- 		<table tableName="tbTeamLine" domainObjectName="TeamLine" enableUpdateByExample="false"> -->
+<!-- 			<property name="useActualColumnNames" value="true" /> -->
+<!-- 		</table> -->
+		<table tableName="tbComplaint" domainObjectName="Complaint" enableUpdateByExample="false">
+			<property name="useActualColumnNames" value="true" />
+		</table>
+
+
+	</context>
+</generatorConfiguration> 
