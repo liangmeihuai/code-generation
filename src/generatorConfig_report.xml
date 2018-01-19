@@ -15,7 +15,7 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"	
-		connectionURL="jdbc:mysql://127.0.0.1:33061/mcloud?useUnicode=true"
+		connectionURL="jdbc:mysql://127.0.0.1:33061/injecting?useUnicode=true"
 			userId="mcloud" password="mcpwd" />
 			
 
@@ -44,14 +44,7 @@
 		
 
 		<!-- 生成表对应的操作与实体对象 -->
-		<table tableName="team_auth" domainObjectName="TeamAuth" enableUpdateByExample="true">
-			<property name="useActualColumnNames" value="true" />
-		</table>
-
-		<table tableName="team_email_map" domainObjectName="TeamEmail" enableUpdateByExample="true">
-			<property name="useActualColumnNames" value="true" />
-		</table>
-		<table tableName="tb_applicant_info" domainObjectName="ApplicantInfo" enableUpdateByExample="true">
+		<table tableName="tb_channel" domainObjectName="Channel" enableUpdateByExample="true">
 			<property name="useActualColumnNames" value="true" />
 		</table>
 

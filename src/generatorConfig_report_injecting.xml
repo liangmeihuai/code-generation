@@ -24,21 +24,21 @@
 		</javaTypeResolver>
 
 		<!-- 配置自动生成的Model的保存路径与其它参数 -->
-		<javaModelGenerator targetPackage="com.td.report.bean.mcloud"
+		<javaModelGenerator targetPackage="com.td.report.bean.injecting"
 			targetProject=".\src">
 			<property name="enableSubPackages" value="false" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<!-- 配置自动生成的Mappper.xml映射的保存路径与其它参数 -->
-		<sqlMapGenerator targetPackage="com.td.report.mapper.mcloud"
+		<sqlMapGenerator targetPackage="com.td.report.mapper.injecting"
 			targetProject=".\src">
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 
 		<!-- 配置自动生成的Mappper.java接口的保存路径与其它参数 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.td.report.mapper.mcloud" targetProject=".\src">
+			targetPackage="com.td.report.mapper.injecting" targetProject=".\src">
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		

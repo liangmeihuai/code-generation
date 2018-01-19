@@ -23,7 +23,8 @@ public class Generation {
 		boolean overwrite = true;
 
 //		File configFile = new File("src/generatorConfig_media_service.xml");
-		File configFile = new File("src/generatorConfig_report.xml");
+//		File configFile = new File("src/generatorConfig_report_injecting.xml");
+		File configFile = new File("src/generatorConfig_report_portrait.xml");
 		ConfigurationParser cp = new ConfigurationParser(warnings);
 		Configuration config = cp.parseConfiguration(configFile);
 		DefaultShellCallback callback = new DefaultShellCallback(overwrite);
