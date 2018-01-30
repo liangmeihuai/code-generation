@@ -15,7 +15,7 @@
 		</commentGenerator>
 
 		<jdbcConnection driverClass="com.mysql.jdbc.Driver"	
-		connectionURL="jdbc:mysql://127.0.0.1:33061/injecting?useUnicode=true"
+		connectionURL="jdbc:mysql://127.0.0.1:33061/mc_portrait?useUnicode=true"
 			userId="mcloud" password="mcpwd" />
 			
 
@@ -24,27 +24,27 @@
 		</javaTypeResolver>
 
 		<!-- 配置自动生成的Model的保存路径与其它参数 -->
-		<javaModelGenerator targetPackage="com.td.report.bean.injecting"
+		<javaModelGenerator targetPackage="com.td.report.bean.portrait"
 			targetProject=".\src">
 			<property name="enableSubPackages" value="false" />
 			<property name="trimStrings" value="true" />
 		</javaModelGenerator>
 
 		<!-- 配置自动生成的Mappper.xml映射的保存路径与其它参数 -->
-		<sqlMapGenerator targetPackage="com.td.report.mapper.injecting"
+		<sqlMapGenerator targetPackage="com.td.report.mapper.portrait"
 			targetProject=".\src">
 			<property name="enableSubPackages" value="false" />
 		</sqlMapGenerator>
 
 		<!-- 配置自动生成的Mappper.java接口的保存路径与其它参数 -->
 		<javaClientGenerator type="XMLMAPPER"
-			targetPackage="com.td.report.mapper.injecting" targetProject=".\src">
+			targetPackage="com.td.report.mapper.portrait" targetProject=".\src">
 			<property name="enableSubPackages" value="false" />
 		</javaClientGenerator>
 		
 
 		<!-- 生成表对应的操作与实体对象 -->
-		<table tableName="tb_channel" domainObjectName="Channel" enableUpdateByExample="true">
+		<table tableName="portraits" domainObjectName="Portraits" enableUpdateByExample="true">
 			<property name="useActualColumnNames" value="true" />
 		</table>
 
